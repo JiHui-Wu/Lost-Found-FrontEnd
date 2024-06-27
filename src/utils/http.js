@@ -6,7 +6,7 @@ import { useUserStore } from '../stores/user';
 
 
 const http = axios.create({
-    baseURL: '/api', // 确保这里配置正确
+    baseURL: 'http://124.222.74.62/api', // 确保这里配置正确
     timeout: 60000,
     headers: {'Content-Type': 'application/json'}
 });

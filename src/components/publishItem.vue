@@ -25,9 +25,9 @@
           ref="uploadRef"
           :before-upload="beforeUpload"
       >
-        <i class="el-icon-plus"></i>
+        <i class="el-icon-plus" v-if="!imagePreview"></i>
+        <img v-if="imagePreview" :src="imagePreview" class="preview-image" />
       </el-upload>
-      <img v-if="imagePreview" :src="imagePreview" class="preview-image" />
     </el-form-item>
     <el-form-item>
       <el-button type="primary" native-type="submit">提交</el-button>
@@ -133,8 +133,12 @@ const submitForm = async () => {
 
 <style scoped>
 .preview-image {
-  max-width: 200px;
-  max-height: 200px;
-  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.upload-demo .el-upload {
+  width: 178px;
+  height: 178px;
 }
 </style>

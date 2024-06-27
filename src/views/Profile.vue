@@ -2,7 +2,7 @@
   <div class="content">
     <!-- 用户发布的失物招领信息 -->
     <div class="form">
-      <h2 style="text-align: center;">我的失物招领</h2>
+      <h2 style="text-align: center;">我的失物</h2>
       <el-table :data="myLostItems" style="width: 100%">
         <el-table-column prop="item_name" label="物品名称" width="200" />
         <el-table-column prop="location" label="丢失位置" width="200" />
@@ -28,7 +28,7 @@
 
     <!-- 用户发布的寻物启事信息 -->
     <div class="form">
-      <h2 style="text-align: center;">我的寻物启事</h2>
+      <h2 style="text-align: center;">我的招领</h2>
       <el-table :data="myFoundItems" style="width: 100%">
         <el-table-column prop="item_name" label="物品名称" width="200" />
         <el-table-column prop="location" label="发现位置" width="200" />
